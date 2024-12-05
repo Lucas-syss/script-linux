@@ -10,4 +10,8 @@ if [ $# -ne 1 ]; then
     exit 1
 fi
 
-#rm -rf $1
+for pasta in ./*; do
+    if [[ $(basename $pasta) == *$1* ]]; then
+        rm -rf $pasta/* 
+    fi
+done
