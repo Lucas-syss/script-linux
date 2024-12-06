@@ -6,7 +6,7 @@ if [ "$(basename "$PWD")" != "script_sample_folder" ]; then
 fi
 
 if [ $# -ne 1 ]; then
-    echo "Erro: Por favor, forneça um argumento para renomear a pasta."
+    echo "Erro: Por favor, forneça um argumento para apagar o conteudo das pastas com o dado argumento."
     exit 1
 fi
 
@@ -15,3 +15,5 @@ for pasta in ./*; do
         rm -rf $pasta/* 
     fi
 done
+
+echo "Conteudo apagado com sucesso"
